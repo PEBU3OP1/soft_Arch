@@ -4,6 +4,7 @@ from Swordsman import Swordsman
 from playing_field import one_field
 
 class Program():
+    """метод заполнения команды (списка), команда заполняется рандомным классом Archer или Swordsman"""
     def teams_adding(self, team: list, side: str, enemy_side: list) -> list:
         hero_choosing = random.randint(0,1)
         if hero_choosing:
@@ -17,12 +18,12 @@ class Program():
     def main(self):
             team1 = []
             team2 = []
-
+            """заполняю команды Красные и Синие"""
             Program().teams_adding(team=team1, side='Red', enemy_side=team2)
             Program().teams_adding(team=team2, side='Blue', enemy_side=team1)
 
 
-
+            """основной цикл игры"""
             while True:
 
                 one_field(str(team1[0].get_name())[0], str(team2[0].get_name())[0], str(team1[0]), str(team2[0]))

@@ -6,6 +6,8 @@ import random
 from Heavy_armor import Steel_armor, Ebony_armor
 
 class Swordsman():
+    """методы для рандомного выбора меча и тяж брони при создании класса Swordsman """
+
     def __sword_choosing(self):
         sword_choose = random.randint(0, 1)
         if sword_choose:
@@ -23,9 +25,9 @@ class Swordsman():
             armor = Ebony_armor()
         return armor
 
-
-
-
+    """ здесь к защите/атаке прирастает значения от полученного меча/брони
+        также использую имя меча/брони, определяю противную сторону. На самом деле нужно было делать родительский
+        базовый класс и там реализовывать основные методы / переменные"""
     def __init__(self, side:str, enemy_side: list):
         self.__name = 'Swordsman'
         self.__health = 20
@@ -39,6 +41,7 @@ class Swordsman():
         self.__armors_name = self.__heavy_armor.get_armors_name()
         self.__swords_name = self.__sword.get_swords_name()
 
+    """это использую для вывода инф на экран"""
     def __str__(self):
         return self.__name + "; Hlth: " + str(self.__health) + "; Attck: " + str(self.__attack) + "; Dffnc " \
                + str(self.__deffence) + "; Sword: " + self.__swords_name + "; Heavy Armor: " \
@@ -46,11 +49,20 @@ class Swordsman():
 
 
 
-    def get_name(self):
-        return self.__name
 
     def get_damage_from_enmemy (self):
         self.__health = self.__health - int(self.__enemy_side[0].get_attack()*(1 - float(self.__deffence /100)))
+
+    def check_state(self):
+        if self.__health <= 0:
+            self.__state = "DEAD"
+            self.__name = "X"
+            return False
+        return True
+
+    """данные методы использовал в процессе создания, в данном примере носят информативный характер"""
+    def get_name(self):
+        return self.__name
 
     def get_attack(self):
         return self.__attack
@@ -61,9 +73,3 @@ class Swordsman():
     def get_side(self):
         return self.__side
 
-    def check_state(self):
-        if self.__health <= 0:
-            self.__state = "DEAD"
-            self.__name = "X"
-            return False
-        return True

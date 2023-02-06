@@ -38,7 +38,7 @@ class Program():
 
         d = [a, b, c, e]
 
-        print(self.area_list(d))
+        print(self.info(d))
         # print(Program().info(d))
 
 

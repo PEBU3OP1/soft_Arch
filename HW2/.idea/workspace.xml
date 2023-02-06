@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ee27e173-fdf9-40f3-a552-afdc02a122ac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Archer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Swordsman.py" beforeDir="false" afterPath="$PROJECT_DIR$/Swordsman.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +31,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HW3" />
   </component>
   <component name="RunManager" selected="Python.main">
     <configuration name="Best_bow" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">

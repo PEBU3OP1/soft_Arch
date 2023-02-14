@@ -15,7 +15,8 @@ public class Sample {
         presenter.loadTables();
         presenter.updateView();
 
-        view.reservationTable(new Date(),3,"Севик");
+        view.reservationTable(new Date(),4,"Севик");
+        view.changeReservationTable(1,new Date(),4,"Севик");
 
     }
 }

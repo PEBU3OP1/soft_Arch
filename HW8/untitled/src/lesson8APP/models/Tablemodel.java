@@ -42,4 +42,14 @@ public class Tablemodel implements Model {
         throw new RuntimeException("Номер стола некорректен");
     }
 
+    public int changeReservationTable(int oldReservation, Date orderDate, int tableNo, String name){
+        Optional<Table> table = loadTables().stream().filter(t -> t.getNo() == tableNo).findFirst();
+        if(table.isPresent()){
+            table.get().getReservations().clear();
+            int newReservationId = reservationTable(orderDate,tableNo,name);
+            return newReservationId;
+
+        }
+        throw new RuntimeException("Номер стола некорректен");
+    }
 }

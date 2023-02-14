@@ -27,7 +27,16 @@ public class BookingView implements View {
 
     }
 
+    public void changeReservationTable(int oldReservation, Date orderDate, int tableNo, String name){
+        observer.onChangeReservationTable(oldReservation,orderDate,tableNo,name);
+    }
+
     public void printReservayionTableResult(int reservationNo){
         System.out.printf("Стол успешно забронирован. Номер брони: %d\n",reservationNo);
+    }
+
+    public void changeReservationTableResult(int newReservationNo){
+        System.out.println("Бронь отменена!");
+        System.out.printf("Новый стол успешно забронирован. Номер новой брони: %d\n", newReservationNo);
     }
 }

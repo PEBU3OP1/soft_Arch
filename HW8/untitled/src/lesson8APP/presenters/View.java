@@ -9,4 +9,5 @@ public interface View {
     void showTables(Collection<Table> tables);
     void setObserver(ViewObserver observer);
     void printReservayionTableResult(int reservationNo);
+    void changeReservationTableResult(int newReservationNo);
 }
